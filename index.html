@@ -58,7 +58,9 @@
       <section class="section hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для <br />вашого бізнесу</h1>
-          <button data-modal-open type="button" class="primary-button">Замовити послугу</button>
+          <button data-modal-open type="button" class="primary-button primary-button--wide">
+            Замовити послугу
+          </button>
         </div>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal-window">
@@ -259,7 +261,7 @@
               <div class="team__details">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__position" lang="en">Frontend Developer</p>
-                <ul class="flex-schedule list">
+                <ul class="social">
                   <li class="social__item">
                     <a href="https://www.instagram.com" class="social__link">
                       <svg class="social__icon">
@@ -296,7 +298,7 @@
               <div class="team__details">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__position" lang="en">Marketing</p>
-                <ul class="flex-schedule list">
+                <ul class="social">
                   <li class="social__item">
                     <a href="https://www.instagram.com" class="social__link">
                       <svg class="social__icon">
@@ -338,7 +340,7 @@
               <div class="team__details">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__position" lang="en">UI Designer</p>
-                <ul class="flex-schedule list">
+                <ul class="social">
                   <li class="social__item">
                     <a href="https://www.instagram.com" class="social__link">
                       <svg class="social__icon">
@@ -426,34 +428,39 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-flex">
-        <div class="address-info">
+      <div class="container container--flex">
+        <div class="address">
           <a href="./index.html" class="logo footer__logo"
             ><span class="logo__wrapper">Web</span>Studio</a
           >
           <address>
-            <ul class="list">
-              <li class="address-list">
+            <ul class="address__list">
+              <li class="address__item">
                 <a
-                  class="address"
+                  class="address__link"
                   href="https://goo.gl/maps/Dzyk4giRB26Cq9mM9"
                   rel="noopener noreffer"
                 >
                   м. Київ, пр-т Лесі Українки, 26
                 </a>
               </li>
-              <li class="address-list">
-                <a class="address contacts" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <li class="address__item">
+                <a
+                  class="address__link address__link--semitransparent"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
-              <li class="address-list">
-                <a class="address contacts" href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="address__item">
+                <a class="address__link address__link--semitransparent" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
         </div>
-        <!-- FIXME \/\/\/ -->
-        <div class="social-media">
-          <h3 class="footer-title">приєднуйтесь</h3>
+        <div class="footer__media">
+          <h3 class="footer__title">приєднуйтесь</h3>
           <ul class="social">
             <li class="social__item">
               <a href="https://www.instagram.com" class="social__link social__link--footer">
@@ -485,19 +492,19 @@
             </li>
           </ul>
         </div>
-        <div class="subscripction-box">
-          <p class="footer-title">Підпишіться на розсилку</p>
-          <form class="subscription-form">
+        <div class="subscripction">
+          <p class="footer__title">Підпишіться на розсилку</p>
+          <form class="subscription__form">
             <input
               type="email"
               name="email"
               id="subscription-mail"
               placeholder="E-mail"
-              class="subscription-field"
+              class="subscription__field"
             />
             <button type="submit" class="primary-button">
               Підписатися
-              <svg class="subscription-icon">
+              <svg class="subscription__icon">
                 <use href="./images/icons.svg#icon-subscription"></use>
               </svg>
             </button>

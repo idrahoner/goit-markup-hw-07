@@ -220,8 +220,6 @@ ul {
   color: var(--blue-color);
 }
 
-/* Налаштування <footer> */
-
 /* =====> Футер <===== */
 
 .footer {
@@ -231,39 +229,31 @@ ul {
   background-color: var(--dark-grey-color);
 }
 
-.footer-flex {
-  display: flex;
-  align-items: baseline;
-}
-
-.address-info {
+.address {
+  width: 231px;
   margin-right: 70px;
 }
 
-.logo.lower {
-  margin-bottom: 20px;
-}
-
-.address-list:not(:last-child) {
+.address__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.address {
-  transition: color 250ms var(--animation-style);
-
+.address__link {
   text-decoration: none;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   color: var(--white-color);
+  transition: color 250ms var(--animation-style);
 }
 
-.contacts {
+.address__link--semitransparent {
   color: var(--contacts-color);
 }
 
-.footer-title {
+.footer__title {
   display: block;
   margin-bottom: 20px;
 
@@ -276,18 +266,18 @@ ul {
   color: var(--white-color);
 }
 
-.subscripction-box {
+.subscripction {
   margin-left: auto;
 }
 
-.subscription-form {
+.subscription__form {
   display: flex;
   align-items: flex-end;
   margin-left: auto;
   gap: 12px;
 }
 
-.subscription-field {
+.subscription__field {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
@@ -303,16 +293,7 @@ ul {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.hero-button.subscription-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  height: 50px;
-  padding: 10px 28px;
-}
-
-.subscription-icon {
+.subscription__icon {
   margin-left: 10px;
   width: 24px;
   height: 24px;
@@ -382,6 +363,12 @@ ul {
 .primary-button:focus {
   background-color: var(--active-btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.primary-button--wide {
+  min-width: 216px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 /* =====> Модальне вікно <===== */
@@ -599,8 +586,6 @@ ul {
   color: var(--blue-color);
 }
 
-/* Налаштування секції "Переваги" */
-
 /* =====> Переваги <===== */
 
 .benefits {
@@ -655,8 +640,6 @@ ul {
   color: var(--secondary-text-color);
 }
 
-/* Секція "Напрямки діяльності" */
-
 /* =====> Діяльність <===== */
 
 .practice__list {
@@ -689,8 +672,6 @@ ul {
   color: var(--white-color);
   background: var(--practice-bg-color);
 }
-
-/* Налаштування секції "Про команду" */
 
 /* =====> Команда <===== */
 
@@ -782,8 +763,6 @@ ul {
   fill: currentColor;
 }
 
-/* Секція "Постійні клієнти" */
-
 /* ====> Клієнти <===== */
 
 .clients {
@@ -824,16 +803,19 @@ ul {
 
 /* Налаштування <main> сторінки "Портфоліо" */
 
-.buttons {
+/* =====> Портфоліо <===== */
+
+.filter {
+  display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.filter-item:not(:last-child) {
+.filter__item:not(:last-child) {
   margin-right: 8px;
 }
 
-.filter-button {
+.filter__button {
   padding: 6px 22px;
 
   font-family: inherit;
@@ -844,46 +826,49 @@ ul {
 
   color: inherit;
   background-color: var(--primary-background-color);
+  border-radius: 4px;
+  border-color: transparent;
 
   transition: color 250ms var(--animation-style), background-color 250ms var(--animation-style),
     box-shadow 250ms var(--animation-style);
   cursor: pointer;
 }
 
-.filter-button:hover,
-.filter-button:focus {
+.filter__button:hover,
+.filter__button:focus {
   color: var(--white-color);
   background-color: var(--blue-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.flex-wrap {
+.portfolio {
+  display: flex;
   flex-wrap: wrap;
 }
 
-.portfolio-item {
+.portfolio__item {
   margin-right: 30px;
   margin-bottom: 30px;
 
   transition: box-shadow 250ms var(--animation-style);
 }
 
-.portfolio-item:nth-child(3n) {
+.portfolio__item:nth-child(3n) {
   margin-right: 0;
 }
 
-.portfolio-item:nth-last-child(-n + 3) {
+.portfolio__item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
-.portfolio-item:hover,
-.portfolio-item:focus {
+.portfolio__item:hover,
+.portfolio__item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-picture {
+.portfolio__picture {
   position: relative;
 
   width: 370px;
@@ -891,7 +876,7 @@ ul {
   overflow: hidden;
 }
 
-.portfolio-overlay {
+.portfolio__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -905,12 +890,12 @@ ul {
   background-color: var(--portfolio-bg-color);
 }
 
-.portfolio-item:hover .portfolio-overlay,
-.portfolio-item:focus .portfolio-overlay {
+.portfolio__item:hover .portfolio__overlay,
+.portfolio__item:focus .portfolio__overlay {
   transform: translateY(0);
 }
 
-.portfolio-description {
+.portfolio__description {
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
@@ -918,13 +903,13 @@ ul {
   color: var(--white-color);
 }
 
-.portfolio-box {
+.portfolio__details {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-border-color);
   border-top: none;
 }
 
-.project-name {
+.portfolio__name {
   margin-bottom: 4px;
 
   font-weight: var(--bold-font-weight);
@@ -933,7 +918,7 @@ ul {
   letter-spacing: 0.06em;
 }
 
-.project-type {
+.portfolio__type {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
